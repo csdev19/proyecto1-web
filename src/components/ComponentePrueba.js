@@ -14,16 +14,17 @@ function ComponentePrueba() {
     setOpen(true);
   };
 
-  const handleClose = () => {
-    // onClose(selectedValue);
+  const handleClose = (value) => {
+    setOpen(false);
+    setSelectedValue(value);
   };
-
+  
   return (
     <div>
       <Button variant="contained" color="primary" onClick={handleClickOpen}>
         Hola Mundo!
       </Button>
-      <SimpleDialog selectedValue={selectedValue} open={open}  />
+      <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
     </div>
   );
 }
