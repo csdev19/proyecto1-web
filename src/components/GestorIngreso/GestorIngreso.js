@@ -33,18 +33,20 @@ function GestorIngreso() {
 
   return (
     <div class="main-container">
-      <div class="parte1">
-        <img src={process.env.PUBLIC_URL + '/images/portada_login.png'} alt="imagen portada" className="imagen-ingreso" />
+      <div class="part1" style={{ backgroundImage:`url(${process.env.PUBLIC_URL + '/images/portada_login2.jpg'})` }}>
+        {/* <img src={process.env.PUBLIC_URL + '/images/portada_login2.jpg'} alt="imagen portada" className="imagen-ingreso" /> */}
       </div>
-      <div class="parte2">
-        <div>
+      <div class="part2">
+        <div class="part2-content">
           <h1>Crea y construye proyectos con gente como tu</h1>
-          <Button variant="contained" color="primary" onClick={handleLogin}>
-            Iniciar Sesion
-          </Button>
-          <Button variant="contained" color="secondary" onClick={handleRegister}>
-            Registrarse
-          </Button>
+          <div class="btn-content">
+            <Button variant="contained" color="primary" onClick={handleLogin}>
+              Iniciar Sesion
+            </Button>
+            <Button variant="contained" color="secondary" onClick={handleRegister}>
+              Registrarse
+            </Button>
+          </div>
         </div>
       </div>
 
