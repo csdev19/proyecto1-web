@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+
+.hola {
+
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.main-container > .parte2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-ingreso {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
