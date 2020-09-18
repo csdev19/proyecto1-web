@@ -71,20 +71,14 @@
   display: flex;
   align-items: center;
 }
+.part2 h1{
+  color: #505050;
+}
 
 .part2-content{
   box-sizing: border-box;
   padding: 0 20px;
 }
-.part2-content .btn-content{
-  margin-top: 20px;
-}
-/*
-.imagen-ingreso {
-  height: 100%;
-  width: 100%;
-}
-*/
 /*END*/
 
 
