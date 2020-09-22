@@ -47,19 +47,19 @@ export default function ClippedDrawer() {
   const data = [
     {
       name: 'Inbox',
-      route: '/'
+      route: '/profile'
     },
     {
       name: 'Starred',
-      route: '/'
+      route: '/profile'
     },
     {
       name: 'Send email',
-      route: '/'
+      route: '/home'
     },
     {
       name: 'Drafts',
-      route: '/'
+      route: '/home'
     }
   ]
 
