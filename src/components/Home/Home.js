@@ -16,22 +16,16 @@ export const Home = () => {
 
     console.log("Home -> data", data)
     
-
+    stateItemsList(data);
   }, []);
 
 
   return (
     <>
+      {itemsList.map((item, index) => (
+        <CardExample />
+      ))}
 
-itemsList
-      <ClippedDrawer />
-      {/* <h1>Hola estamos en el home</h1>
-      <p> get</p>
-      <CardExample />
-      <CardExample />
-      <CardExample />
-      <CardExample />
-      <p>hiiiiii</p> */}
 
     </>
   );
