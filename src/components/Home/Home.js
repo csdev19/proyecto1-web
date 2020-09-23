@@ -23,6 +23,7 @@ export const Home = () => {
   return (
     <>
 
+itemsList
       <ClippedDrawer />
       {/* <h1>Hola estamos en el home</h1>
       <p> get</p>
