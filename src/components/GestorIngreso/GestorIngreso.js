@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import Login from './../Login/Login';
 import Register from './../Register/Register';
 
-function GestorIngreso() {
+function GestorIngreso({ history }) {
   const [openLogin, setOpenLogin] = React.useState(false);
   const [openRegister, setOpenRegister] = React.useState(false);
 
@@ -13,6 +13,7 @@ function GestorIngreso() {
   };
 
   const handleLogin = () => {
+    console.log('history', history)
     setOpenLogin(true);
   };
 
@@ -29,14 +30,20 @@ function GestorIngreso() {
     setOpenLogin(false);
     // setSelectedValue(value);
   };
-  
+
+  const handleAction = (data) => {
+    console.log('hola data -> ', data)
+    // history.push('/home') // Para agregar rutas
+    // history.replace('') // Para setear una ruta  
+  }
+
 
   return (
-    <div class="main-container">
-      <div class="parte1">
+    <div className="main-container">
+      <div className="parte1">
         <img src={process.env.PUBLIC_URL + '/images/portada_login.png'} alt="imagen portada" className="imagen-ingreso" />
       </div>
-      <div class="parte2">
+      <div className="parte2">
         <div>
           <h1>Crea y construye proyectos con gente como tu</h1>
           <Button variant="contained" color="primary" onClick={handleLogin}>
@@ -48,7 +55,7 @@ function GestorIngreso() {
         </div>
       </div>
 
-      <Login open={openLogin} onClose={handleCloseLogin} />
+      <Login open={openLogin} onClose={handleCloseLogin} onAction={handleAction}/>
       <Register open={openRegister} onClose={handleCloseRegister} />
     </div>
   );
